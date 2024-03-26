@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="flex items-center justify-between px-12 h-[15vh]">
+    <header className="flex items-center justify-between px-12 h-[15vh] page-bg">
       <h1 className="text-white text-xl font-bold">Gamer's Haven</h1>
       <input type="text" placeholder="Search games" className="py-2 px-4 rounded-2xl bg-gray hover:bg-white search-transition w-[65%]"/>
       <div className="flex gap-5">

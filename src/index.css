@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+.page-bg {
   background-color: #151515;
 }
 
