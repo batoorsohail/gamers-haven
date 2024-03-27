@@ -7,10 +7,14 @@ function App() {
   return (
     <>
       <Header />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
+      <section className='flex'>
+        <Navbar />
+        <div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </div>
+      </section>
     </>
   );
 }
