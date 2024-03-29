@@ -10,6 +10,10 @@ body {
   background-color: hsla(0, 0%, 100%, .16);
 }
 
-.search-transition {
+.text-gray-hover:hover {
+  color: rgb(103,103,103);
+}
+
+.slow-transition {
   transition: 0.2s ease-out;
 }
