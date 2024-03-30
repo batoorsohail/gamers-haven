@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getGames, selectAllGames } from "../redux/games/gamesSlice";
-import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getGames, selectAllGames } from '../redux/games/gamesSlice';
 
 const HomePage = () => {
   const games = useSelector(selectAllGames);
@@ -12,11 +12,11 @@ const HomePage = () => {
   }, [dispatch]);
 
   if (games.length === 0) {
-    return(
+    return (
       <section>
-         <h2 className="text-white text-xl font-bold">Loading...</h2>
+        <h2 className="text-white text-xl font-bold">Loading...</h2>
       </section>
-    )
+    );
   }
 
   return (
@@ -33,17 +33,26 @@ const HomePage = () => {
       <section className="flex flex-wrap gap-5">
         {games.map((game) => (
           <div key={game.gameId} className="lg:w-72 w-2/5 rounded-xl bg-gray shadow-lg">
-            <img src={game.gameBg} alt={game.gameName}  className="w-full rounded-xl"/>
+            <img src={game.gameBg} alt={game.gameName} className="w-full rounded-xl" />
             <div className="flex flex-col gap-2 px-3 pb-5 pt-2">
               <h3 className="text-white text-xl font-bold">{game.gameName}</h3>
-              <p className="flex justify-between text-gray">Release Date: <span className="text-white">{game.gameReleased}</span></p>
-              <p className="flex justify-between text-gray">Game Ratings: <span className="text-white">{game.gameRating}/5</span></p>
+              <p className="flex justify-between text-gray">
+                Release Date:
+                <span className="text-white">{game.gameReleased}</span>
+              </p>
+              <p className="flex justify-between text-gray">
+                Game Ratings:
+                <span className="text-white">
+                  {game.gameRating}
+                  /5
+                </span>
+              </p>
             </div>
           </div>
         ))}
       </section>
     </main>
-  )
+  );
 };
 
 export default HomePage;
