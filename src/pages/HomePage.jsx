@@ -11,6 +11,14 @@ const HomePage = () => {
     dispatch(getGames());
   }, [dispatch]);
 
+  if (games.length === 0) {
+    return(
+      <section>
+         <h2 className="text-white text-xl font-bold">Loading...</h2>
+      </section>
+    )
+  }
+
   return (
     <main className="flex flex-col gap-4 h-[80vh]">
       <h2 className="font-bold text-7xl text-white">All Games</h2>
@@ -22,11 +30,15 @@ const HomePage = () => {
         <button type="button" className="bg-gray px-3 py-1 rounded-md text-white text-gray-hover slow-transition">Release Date</button>
         <button type="button" className="bg-gray px-3 py-1 rounded-md text-white text-gray-hover slow-transition">Platforms</button>
       </div>
-      <section className="flex flex-wrap">
+      <section className="flex flex-wrap gap-5">
         {games.map((game) => (
-          <div key={game.gameId} className="w-60">
-            <img src={game.gameBg} alt={game.gameName}  className="w-[90%]"/>
-            <h3 className="text-white text-xl font-bold">{game.gameName}</h3>
+          <div key={game.gameId} className="w-60 rounded-xl bg-gray">
+            <img src={game.gameBg} alt={game.gameName}  className="w-full rounded-xl"/>
+            <div className="flex flex-col gap-2 px-3 pb-5 pt-2">
+              <h3 className="text-white text-xl font-bold">{game.gameName}</h3>
+              <p className="flex justify-between text-gray">Release Date: <span className="text-white">{game.gameReleased}</span></p>
+              <p className="flex justify-between text-gray">Game Ratings: <span className="text-white">{game.gameRating}/5</span></p>
+            </div>
           </div>
         ))}
       </section>

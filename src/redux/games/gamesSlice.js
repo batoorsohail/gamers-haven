@@ -17,7 +17,6 @@ export const getGames = createAsyncThunk("games/getGames", async () => {
     gameReleased: game.released,
     gameBg: game.background_image,
     gameRating: game.rating,
-    gameRatingTop: game.rating_top
   }))
 })
 

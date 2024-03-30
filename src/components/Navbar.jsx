@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaStar, FaHotjar, FaFastForward } from 'react-icons/fa';
 
 const Navbar = () => (
-  <section className="w-64 sticky h-[80vh] px-12 mt-10 mr-2">
+  <section className="w-64 sticky px-12 mt-10 mr-2">
     <aside>
       <nav className="flex flex-col gap-3">
         <div>

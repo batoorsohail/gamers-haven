@@ -7,10 +7,14 @@ body {
 }
 
 .bg-gray {
-  background-color: hsla(0, 0%, 100%, .16);
+  background-color: #212222
 }
 
 .text-gray-hover:hover {
+  color: rgb(103,103,103);
+}
+
+.text-gray {
   color: rgb(103,103,103);
 }
 

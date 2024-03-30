@@ -9,11 +9,11 @@ function App() {
       <Header />
       <section className="flex">
         <Navbar />
-        <div>
+        <section>
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
-        </div>
+        </section>
       </section>
     </>
   );
