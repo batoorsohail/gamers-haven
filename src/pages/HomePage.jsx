@@ -3,6 +3,14 @@ import { getGames, selectAllGames } from "../redux/games/gamesSlice";
 import { useEffect } from "react";
 
 const HomePage = () => {
+  const games = useSelector(selectAllGames);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getGames());
+  }, [dispatch]);
+
   return (
     <section className="flex flex-col gap-4 h-[80vh]">
       <h2 className="font-bold text-7xl text-white">All Games</h2>

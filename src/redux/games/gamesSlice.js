@@ -21,5 +21,25 @@ export const getGames = createAsyncThunk("games/getGames", async () => {
   }))
 })
 
+const gamesSlice = createSlice({
+  initialState,
+  name: "games",
+  reducers: {},
+  extraReducers(builder){
+    builder
+      .addCase(getGames.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(getGames.fulfilled, (state, action) => {
+        state.status = "succeed";
+        state.gamesData = action.payload;
+      })
+      .addCase(getGames.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      })
+  }
+});
+
 export const selectAllGames = ((state) => state.games.gamesData);
 export default gamesSlice.reducer;
