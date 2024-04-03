@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { getGameDetails, selectAllGameDetails } from '../redux/games/gamesSlice';
 
@@ -62,7 +62,7 @@ const GameDetailsPage = () => {
               <p className="text-gray font-bold">Platforms</p>
               {
                 gameData.platforms && Object.entries(gameData.platforms).map(([key, platform]) => (
-                  <p key={key} className="text-white">{platform.platform.name},</p>
+                  <p key={key} className="text-white">{platform.platform.name}</p>
                 ))
               }
             </div>
@@ -93,6 +93,10 @@ const GameDetailsPage = () => {
                   <p key={key} className="text-white">{publisher.name}</p>
                 ))
               }
+            </div>
+            <div>
+              <p className="text-gray font-bold">Website</p>
+              <a href={gameData.website} className="text-white">{gameData.website}</a>
             </div>
           </div>
           <p className="text-white text-md">{gameData.description_raw}</p>
