@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux"
-import { useParams } from "react-router-dom"
-import { getGameDetails } from "../redux/games/gamesSlice"
-import { selectAllGameDetails } from "../redux/games/gamesSlice"
-import { useEffect } from "react"
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getGameDetails, selectAllGameDetails } from '../redux/games/gamesSlice';
 
 const GameDetailsPage = () => {
   const gameData = useSelector(selectAllGameDetails);
@@ -15,7 +14,7 @@ const GameDetailsPage = () => {
   }, [dispatch, gameId]);
 
   console.log(gameData);
-  
+
   return (
     <section>
       <img src={gameData.background_image} alt={gameData.name} className="bg-local" />
@@ -24,10 +23,10 @@ const GameDetailsPage = () => {
         <p className="text-white text-md">{gameData.description_raw}</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default GameDetailsPage
+export default GameDetailsPage;
 
 // import { useDispatch, useSelector } from "react-redux";
 // import { useParams } from "react-router-dom";

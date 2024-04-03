@@ -21,7 +21,7 @@ export const getGames = createAsyncThunk('games/getGames', async () => {
   }));
 });
 
-export const getGameDetails = createAsyncThunk("games/getGameDetails", async (id) => {
+export const getGameDetails = createAsyncThunk('games/getGameDetails', async (id) => {
   const response = await axios.get(`${API_URL}/${id}?key=35e190d5b5bd4efea3b23c3a2cae933e`);
   return response.data;
   // .map((game) => ({
@@ -33,7 +33,7 @@ export const getGameDetails = createAsyncThunk("games/getGameDetails", async (id
   //   gameDetailBg2: game.background_image_additional,
   //   gameWebsite: game.website,
   // }))
-})
+});
 
 const gamesSlice = createSlice({
   initialState,
