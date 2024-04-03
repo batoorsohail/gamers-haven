@@ -72,16 +72,18 @@ const GameDetailsPage = () => {
               }
             </div>
           </div>
-          <div>
-            <div>
+          <div className="flex flex-wrap gap-10">
+            <div className="w-64">
               <p className="text-gray font-bold">Platforms</p>
-              {
-                gameData.platforms && Object.entries(gameData.platforms).map(([key, platform]) => (
-                  <p key={key} className="text-white">{platform.platform.name}</p>
-                ))
-              }
+              <div className="flex flex-wrap">
+                {
+                  gameData.platforms && Object.entries(gameData.platforms).map(([key, platform]) => (
+                    <p key={key} className="text-white">{platform.platform.name}</p>
+                  ))
+                }
+              </div>
             </div>
-            <div>
+            <div className="w-64">
               <p className="text-gray font-bold">Genre</p>
               {
                 gameData.genres && Object.entries(gameData.genres).map(([key, genre]) => (
@@ -89,11 +91,11 @@ const GameDetailsPage = () => {
                 ))
               }
             </div>
-            <div>
+            <div className="w-64">
               <p className="text-gray font-bold">Release Date</p>
               <p className="text-white">{gameData.released}</p>
             </div>
-            <div>
+            <div className="w-64">
               <p className="text-gray font-bold">Developers</p>
               {
                 gameData.developers && Object.entries(gameData.developers).map(([key, developer]) => (
@@ -101,7 +103,7 @@ const GameDetailsPage = () => {
                 ))
               }
             </div>
-            <div>
+            <div className="w-64">
               <p className="text-gray font-bold">Publishers</p>
               {
                 gameData.publishers && Object.entries(gameData.publishers).map(([key, publisher]) => (
@@ -109,7 +111,7 @@ const GameDetailsPage = () => {
                 ))
               }
             </div>
-            <div>
+            <div className="w-64">
               <p className="text-gray font-bold">Website</p>
               <a href={gameData.website} className="text-white">{gameData.website}</a>
             </div>
