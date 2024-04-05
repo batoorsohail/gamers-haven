@@ -23,7 +23,7 @@ const GameDetailsPage = () => {
           <div className="flex flex-wrap gap-5">
             {gameScreenShots.map((gameScreenShot) => (
               <div key={gameScreenShot.gameId} className="w-56">
-                <img src={gameScreenShot.gameScreenShot} alt="game play image" />
+                <img src={gameScreenShot.gameScreenShot} alt="game play image" className="rounded-lg" />
               </div>
             ))}
           </div>
@@ -124,7 +124,7 @@ const GameDetailsPage = () => {
             </div>
             <div className="w-64">
               <p className="text-gray font-bold">Website</p>
-              <a href={gameData.website} className="text-white">{gameData.website}</a>
+              <a href={gameData.website} className="text-white hover:underline">{gameData.website}</a>
             </div>
           </div>
           <p className="text-white text-md">{gameData.description_raw}</p>
