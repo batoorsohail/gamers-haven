@@ -31,9 +31,9 @@ export const getGameScreenShots = createAsyncThunk('games/getGameScreenShots', a
   const response = await axios.get(`${API_URL}/${id}/screenshots?key=35e190d5b5bd4efea3b23c3a2cae933e`);
   return response.data.results.map((gameImage) => ({
     gameId: gameImage.id,
-    gameScreenShot: gameImage.image
-  }))
-})
+    gameScreenShot: gameImage.image,
+  }));
+});
 
 const gamesSlice = createSlice({
   initialState,
@@ -64,7 +64,7 @@ const gamesSlice = createSlice({
         state.status = 'failed';
         state.error = action.error.message;
       });
-      builder
+    builder
       .addCase(getGameScreenShots.pending, (state) => {
         state.status = 'pending';
       })

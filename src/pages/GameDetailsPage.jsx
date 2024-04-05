@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { getGameDetails, getGameScreenShots, selectAllGameDetails, selectAllGameScreenShots } from '../redux/games/gamesSlice';
+import {
+  getGameDetails, getGameScreenShots, selectAllGameDetails, selectAllGameScreenShots,
+} from '../redux/games/gamesSlice';
 
 const GameDetailsPage = () => {
   const gameData = useSelector(selectAllGameDetails);
