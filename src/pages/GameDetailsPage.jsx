@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { getGameDetails, getGameScreenShots, selectAllGameDetails } from '../redux/games/gamesSlice';
+import { getGameDetails, getGameScreenShots, selectAllGameDetails, selectAllGameScreenShots } from '../redux/games/gamesSlice';
 
 const GameDetailsPage = () => {
   const gameData = useSelector(selectAllGameDetails);
+  const gameScreenShots = useSelector(selectAllGameScreenShots);
   const { gameId } = useParams();
 
   const dispatch = useDispatch();
@@ -16,9 +17,18 @@ const GameDetailsPage = () => {
 
   return (
     <section>
-      <div className="flex flex-col gap-5 w-3/4 mx-10 pb-10">
-        <img src={gameData.background_image} alt={gameData.name} className="rounded-lg" />
-        <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 mx-10 pb-10">
+        <div className="flex gap-10">
+          <img src={gameData.background_image} alt={gameData.name} className="w-1/2 h-1/3 rounded-lg" />
+          <div className="flex flex-wrap gap-5">
+            {gameScreenShots.map((gameScreenShot) => (
+              <div key={gameScreenShot.gameId} className="w-56">
+                <img src={gameScreenShot.gameScreenShot} alt="game play image" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-5 w-3/4">
           <h2 className="text-white text-3xl font-bold">{gameData.name}</h2>
           <div>
             <p className="text-white text-xl font-bold">Ratings:</p>
