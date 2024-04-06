@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectAllGameScreenShots } from "../redux/games/gamesSlice";
+import { selectAllGameScreenShots } from '../redux/games/gamesSlice';
 
 const GameScreenshots = () => {
   const gameScreenShots = useSelector(selectAllGameScreenShots);
@@ -12,7 +12,7 @@ const GameScreenshots = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default GameScreenshots
+export default GameScreenshots;
