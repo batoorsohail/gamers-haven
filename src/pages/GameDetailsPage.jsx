@@ -17,6 +17,8 @@ const GameDetailsPage = () => {
     dispatch(getGameScreenShots(gameId));
   }, [dispatch, gameId]);
 
+  console.log(gameScreenShots)
+
   return (
     <section>
       <div className="flex flex-col gap-5 mx-10 pb-10">

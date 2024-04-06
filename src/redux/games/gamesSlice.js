@@ -4,7 +4,7 @@ import axios from 'axios';
 const initialState = {
   gamesData: [],
   gameDetailsData: [],
-  gameScreenShot: [],
+  gameScreenShots: [],
   status: 'idle',
   error: null,
 };
