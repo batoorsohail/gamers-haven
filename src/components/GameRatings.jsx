@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const GameRatings = ({ gameData }) => (
   <section>
     <p className="text-white text-xl font-bold">Ratings:</p>
@@ -53,5 +55,12 @@ const GameRatings = ({ gameData }) => (
     </div>
   </section>
 );
+
+GameRatings.propTypes = {
+  gameData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    ratings: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default GameRatings;
