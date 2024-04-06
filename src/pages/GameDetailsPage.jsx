@@ -5,6 +5,7 @@ import {
   getGameDetails, getGameScreenShots, selectAllGameDetails,
 } from '../redux/games/gamesSlice';
 import GameScreenshots from '../components/GameScreenshots';
+import GameRatings from '../components/GameRatings';
 
 const GameDetailsPage = () => {
   const gameData = useSelector(selectAllGameDetails);
@@ -28,59 +29,7 @@ const GameDetailsPage = () => {
         </div>
         <div className="flex flex-col gap-5 w-3/4">
           <h2 className="text-white text-3xl font-bold">{gameData.name}</h2>
-          <div>
-            <p className="text-white text-xl font-bold">Ratings:</p>
-            <div className="flex gap-5">
-              {
-                gameData.ratings && Object.entries(gameData.ratings).map(([key, rating]) => {
-                  if (rating.title === 'exceptional') {
-                    return (
-                      <div key={key} className="flex gap-1 items-center">
-                        <div className="w-3 h-3 rounded-full bg-green-600" />
-                        <p className="text-gray text-base">
-                          <span className="text-white font-bold">{rating.title}</span>
-                          {' '}
-                          {rating.count}
-                        </p>
-                      </div>
-                    );
-                  } if (rating.title === 'recommended') {
-                    return (
-                      <div key={key} className="flex gap-1 items-center">
-                        <div className="w-3 h-3 rounded-full bg-blue-600" />
-                        <p className="text-gray text-base">
-                          <span className="text-white font-bold">{rating.title}</span>
-                          {' '}
-                          {rating.count}
-                        </p>
-                      </div>
-                    );
-                  } if (rating.title === 'meh') {
-                    return (
-                      <div key={key} className="flex gap-1 items-center">
-                        <div className="w-3 h-3 rounded-full bg-yellow-600" />
-                        <p className="text-gray text-base">
-                          <span className="text-white font-bold">{rating.title}</span>
-                          {' '}
-                          {rating.count}
-                        </p>
-                      </div>
-                    );
-                  }
-                  return (
-                    <div key={key} className="flex gap-1 items-center">
-                      <div className="w-3 h-3 rounded-full bg-red-600" />
-                      <p className="text-gray text-base">
-                        <span className="text-white font-bold">{rating.title}</span>
-                        {' '}
-                        {rating.count}
-                      </p>
-                    </div>
-                  );
-                })
-              }
-            </div>
-          </div>
+          <GameRatings gameData={gameData} />
           <div className="flex flex-wrap gap-10">
             <div className="w-64">
               <p className="text-gray font-bold">Platforms</p>
