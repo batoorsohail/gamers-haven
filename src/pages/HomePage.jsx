@@ -31,7 +31,7 @@ const HomePage = () => {
         <button type="button" className="bg-gray px-3 py-1 rounded-md text-white text-gray-hover slow-transition">Release Date</button>
         <button type="button" className="bg-gray px-3 py-1 rounded-md text-white text-gray-hover slow-transition">Platforms</button>
       </div>
-      <Games games={games}/>
+      <Games games={games} />
     </main>
   );
 };
