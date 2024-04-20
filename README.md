@@ -21,20 +21,15 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 My Portfolio <a name="about-project"></a>
+# 📖 Gamer's Haven <a name="about-project"></a>
 
-A portfolio is one of the most important things for you to find a job. You can share it with the company you want to work for, and they can get more information about you through your portfolio.
+Gamer's Haven is a platform dedicated to gaming enthusiasts, providing a curated collection of games, reviews, and gaming news. Whether you're a casual player or a hardcore gamer, you'll find something to enjoy here.
 
 ## 🛠 Built With <a name="built-with"></a>
-
-### HTML and CSS <a name="HTML and Css"></a>
-
-HTML and CSS are tools that web developers use to add text, photos, and videos, and also to design a website
 
 <details>
   <summary>Client</summary>
@@ -50,8 +45,8 @@ HTML and CSS are tools that web developers use to add text, photos, and videos, 
 
 The key features of this application:
 
-- **My informations**
-- **My works**
+- **Home Page**
+- **Games Details Page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,7 +54,7 @@ The key features of this application:
 
 You can have access to my project online by clicking on the below link:
 
-- [Live Demo Link](https://batoorsohail.github.io/my-portfolio/)
+- [Live Demo Link](gamers-haven.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,9 +89,8 @@ In order to run this project you need:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **My Projects**
-- [ ] **About Me**
-- [ ] **My Contact Information**
+- [ ] **Search ability**
+- [ ] **Making mobile responsive**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,21 +116,9 @@ This is one of my first big project, and if you like it give a star to my projec
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for helping me to complete this project
+I would like to thank RAWG API for creating such an amazing API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-- **Can we clone it without Git?**
-
-  - No, you should install Git.
-
-- **Which programs did you use to make this?**
-
-  - HTML and CSS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
